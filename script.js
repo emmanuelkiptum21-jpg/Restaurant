@@ -14,5 +14,18 @@ menuOpenButton.addEventListener("click", () => {
 menuCloseButton.addEventListener("click", () => {
     navMenu.style.left = "-300px"; // slide out
 });
+const orderButton = document.querySelector(".order-now");
+const contactButton = document.querySelector(".contact-us");
+
+orderButton.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    window.location.href = "./menu.html"; 
+});
+
+contactButton.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    window.location.href = "./contact.html"; 
+});
+
 
 
