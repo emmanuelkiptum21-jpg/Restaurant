@@ -6,15 +6,27 @@
     padding: 0%;
     box-sizing: border-box;
 
+
+}
+
+body {
+    margin: 0;
 }
 
 header {
     background-color: #680504;
-    padding: 40px;
+    padding: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
 
 }
 
- a {
+a {
     color: #fff;
     text-decoration: none;
 
@@ -25,7 +37,7 @@ ul {
 }
 
 button {
-    
+
     cursor: pointer;
     border: none;
     background: none;
@@ -38,10 +50,12 @@ button {
     font-size: x-large;
     font-weight: 40px;
     justify-content: flex-end;
+    margin-right: 0;
+
 }
 
 .nav-link {
-    padding:9px 12px;
+    padding: 9px 12px;
     transition: 0.3s ease;
 }
 
@@ -51,67 +65,87 @@ button {
 }
 
 .hero-section {
-    position: fixed;
-    min-height: 100vh;
     background-color: #680504;
- 
+    scroll-behavior: smooth;
+
 }
 
 .section-content {
+
     display: flex;
     align-items: center;
     min-height: 100vh;
     color: #fff;
     justify-content: space-between;
-    margin-left:130px;
+    margin-left: 200px;
+    margin-bottom: 300px;
+
 }
 
 .title {
-    font-family: "Miniver",sans-serif;
+    font-family: "Miniver", sans-serif;
     font-weight: 500;
     font-size: xx-large;
     color: #e6af2e;
 
 }
-.sub-title{
+
+.sub-title {
     margin-top: 9px;
     max-width: 70%;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
 }
-.description{
+
+.description {
     margin-top: 9px;
     font-size: medium;
     margin: 24px 0 40px;
     color: #fff;
-    
+
 }
-.hero-image{
-    max-width:500px ;
-    margin-right: 150px;
+
+.details {
+
+    margin-left: 30px;
+    margin-bottom: 40px;
 }
-.buttons{
+
+.hero-image {
+    max-width: 500px;
+    height: 500px;
+    margin-right: 300px;
+    width: 10cm;
+
+
+}
+
+.buttons {
     display: flex;
     gap: 30px;
 
 }
+
 .button {
-    padding:10px 24px ;
+    padding: 10px 24px;
     background-color: #e6af2e;
-    border-radius: 20px; 
+    border-radius: 20px;
     font-weight: medium;
     border: 2px solid transparent;
     transition: 0.3 ease;
 }
-.button:hover,.contact-us{
-    
+
+.button:hover,
+.contact-us {
+
     color: #fff;
     border-color: #fff;
     background: transparent;
 }
-.contact-us:hover{
-    
+
+.contact-us:hover {
+
     color: #fff;
-    border-color:#e6af2e;
+    border-color: #e6af2e;
     background: #e6af2e;
 }
