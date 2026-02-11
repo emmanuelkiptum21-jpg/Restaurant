@@ -1,10 +1,18 @@
-const menuOpenButton = document.querySelector("#menu-open-button");
-const menuCloseButton = document.querySelector("#menu-close-button");
 
+
+
+const menuOpenButton = document.getElementById("menu-open-button");
+const menuCloseButton = document.getElementById("menu-close-button");
+const navMenu = document.querySelector(".nav-menu");
+
+// Open mobile menu
 menuOpenButton.addEventListener("click", () => {
-  document.body.classList.add("show-mobile-menu"); // Open menu
+    navMenu.style.left = "0"; // slide in
 });
 
+// Close mobile menu
 menuCloseButton.addEventListener("click", () => {
-  document.body.classList.remove("show-mobile-menu"); // Close menu
+    navMenu.style.left = "-300px"; // slide out
 });
+
+
