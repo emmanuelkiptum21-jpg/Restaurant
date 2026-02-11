@@ -11,6 +11,7 @@
 
 body {
     margin: 0;
+    padding-top: 80px;
 }
 
 header {
@@ -67,6 +68,7 @@ button {
 .hero-section {
     background-color: #680504;
     scroll-behavior: smooth;
+    margin-top: 80px;
 
 }
 
@@ -114,6 +116,7 @@ button {
 .hero-image {
     max-width: 500px;
     height: 500px;
+    max-height: 30px;
     margin-right: 300px;
     width: 10cm;
 
