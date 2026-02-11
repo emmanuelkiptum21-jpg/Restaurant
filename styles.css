@@ -11,13 +11,11 @@
 
 body {
     margin: 0;
-    padding-top: 80px;
 }
 
 header {
     background-color: #680504;
-    padding: 20px;
-
+    padding: 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -55,9 +53,11 @@ button {
 
 }
 
+
 .nav-link {
     padding: 9px 12px;
     transition: 0.3s ease;
+
 }
 
 .nav-link:hover {
@@ -75,6 +75,7 @@ button {
 .section-content {
 
     display: flex;
+    
     align-items: center;
     min-height: 100vh;
     color: #fff;
@@ -116,7 +117,6 @@ button {
 .hero-image {
     max-width: 500px;
     height: 500px;
-    max-height: 30px;
     margin-right: 300px;
     width: 10cm;
 
@@ -151,4 +151,65 @@ button {
     color: #fff;
     border-color: #e6af2e;
     background: #e6af2e;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .nav-menu {
+
+        background: #fff;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        transition: left 0.2s ease;
+    }
+
+    .nav-link a {
+        color: black;
+        font-size: large;
+        display: block;
+        margin-top: 14px;
+        align-items: center;
+        padding-bottom: 50px;
+
+
+    }
+
+    body.show-mobile-menu.navbar.nav-menu{
+        left:0 ;
+
+
+    }
+    .nav-link:hover {
+        background-color: #e6af2e;
+        border-radius: 10px;
+    
+    } 
+    
+
+.navbar:where(#menu-close-button, #menu-open-button) {
+    font-size: larger;
+    
+}
+.section-content{
+    flex-wrap: wrap;
+}
+
+#menu-close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+
+}
+
+#menu-open-button {
+    color: #fff;
+    margin-left: 98%;
+    font-size: larger;
+}
 }
