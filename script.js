@@ -17,15 +17,20 @@ menuCloseButton.addEventListener("click", () => {
 const orderButton = document.querySelector(".order-now");
 const contactButton = document.querySelector(".contact-us");
 
-orderButton.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    window.location.href = "./menu.html"; 
-});
+// Order Button
+if (orderButton) {
+    orderButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "./menu.html";
+    });
+}
 
-contactButton.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    window.location.href = "./contact.html"; 
-});
-
+// Contact Button
+if (contactButton) {
+    contactButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = "./contact.html";
+    });
+}
 
 
