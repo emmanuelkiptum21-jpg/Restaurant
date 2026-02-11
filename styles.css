@@ -75,7 +75,7 @@ button {
 .section-content {
 
     display: flex;
-    
+
     align-items: center;
     min-height: 100vh;
     color: #fff;
@@ -180,23 +180,24 @@ button {
 
     }
 
-    body.show-mobile-menu.navbar.nav-menu{
-        left:0 ;
+    body.show-mobile-menu.navbar.nav-menu {
+        left: 0;
 
 
     }
+
     .nav-link:hover {
         background-color: #e6af2e;
         border-radius: 10px;
-    
-    } 
-    
 
-.navbar:where(#menu-close-button, #menu-open-button) {
-    font-size: larger;
-    
+    }
+
+
+
+
 }
-.section-content{
+
+.section-content {
     flex-wrap: wrap;
 }
 
@@ -211,5 +212,4 @@ button {
     color: #fff;
     margin-left: 98%;
     font-size: larger;
-}
 }
