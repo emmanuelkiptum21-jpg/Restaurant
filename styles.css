@@ -398,3 +398,11 @@ button {
     cursor: pointer;
     padding: 10px;
 }
+.remove-btn{
+    background-color: #eba709;
+    color: #550b14;
+     border-radius: 5px;
+     padding: 2px 8px;
+     cursor: pointer;
+     margin-left: 5px;
+}
