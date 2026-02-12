@@ -58,7 +58,10 @@ button {
 
 }
 
-#menu-close-button #menu-open-button {}
+/* ineed to fix it */
+#menu-close-button #menu-open-button {
+    display: none;
+}
 
 .nav-link {
     padding: 9px 12px;
@@ -161,9 +164,7 @@ button {
 /* menu style */
 .menu-body {
     background-color: #f8f8f7;
-    padding: 0;
-
-
+    padding: 0 9%;
 }
 
 .menu {
@@ -172,7 +173,6 @@ button {
     justify-content: space-around;
     align-items: center;
     gap: 20px;
-
 }
 
 .search-box {
@@ -183,7 +183,6 @@ button {
     padding: 0 1rem;
     width: 50%;
     margin-left: 30px;
-
 }
 
 .search-box i {
@@ -193,8 +192,6 @@ button {
 .search-box input {
     background: transparent;
     padding: 10px;
-
-
 }
 
 .cart-icon {
@@ -208,7 +205,7 @@ button {
 }
 
 .cart-icon span {
-    background-color: aquamarine;
+    background-color: rgb(101, 186, 101);
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -220,7 +217,6 @@ button {
     position: absolute;
     right: -5px;
     margin-right: 30px;
-
 }
 
 .cover {
@@ -230,7 +226,6 @@ button {
     background-position: center;
     border-radius: 10px;
     margin-top: 10px;
-
 }
 
 .cover-overlay {
@@ -242,7 +237,6 @@ button {
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
-
 }
 
 .section-heading {
@@ -255,11 +249,9 @@ button {
 }
 
 .menu-container {
-
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-
 }
 
 .menu-item {
@@ -275,140 +267,135 @@ button {
 
 .menu-item img {
     width: 100%;
-
 }
 
 /* card-list */
-.card-container{
-
+.card-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-
 }
 
-
-.card-list{
+.card-list {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-
 }
-.card-list{
+
+.card-list {
     width: 190px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
     padding: 10px 1rem;
     border-radius: 10px;
     background-color: #f8f8f7;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #550b1495;
-
 }
-.card-list img{
+
+.card-list img {
     width: 100%;
 }
 
-.card-price{
+.card-price {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-
 }
-.card-price .price{
+
+.card-price .price {
     color: #eba709;
     font-weight: 600;
-
 }
-.add-to-cart{
+
+.add-to-cart {
     background-color: #eba709;
     color: #f8f8f7;
     border-radius: 50%;
     cursor: pointer;
 }
-.add-to-cart:hover{
 
+.add-to-cart:hover {
     color: #f8f8f7;
-    box-shadow: rgba(0, 0, 0, 30%)0px 4px 4px,rgb(231, 236, 236)0px 0px 0px;
-      
-}  
+    box-shadow: rgba(0, 0, 0, 30%)0px 4px 4px, rgb(231, 236, 236)0px 0px 0px;
+}
 
 /* cart menu slidebar */
-
- .sidebar{
+.sidebar {
     width: 300px;
     height: 100%;
     position: fixed;
-    top:0;
+    top: 0;
     /* right: -300px; */
-    right: 0; 
+    right: 0;
     background-color: #e7dddeeb;
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
-    transition:right 0.3s ease-in-out ;
+    transition: right 0.3s ease-in-out;
     z-index: 1000;
-    padding:20px;
+    padding: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
 
- }
- .sidebar-open{
-    right:0;
+.sidebar-open {
+    right: 0;
+}
 
- }
- .sidebar-close{
+.sidebar-close {
     position: absolute;
     right: 10px;
-    top:10px;
+    top: 10px;
     cursor: pointer;
-    
- } 
- .cart-item{
+}
+
+.cart-item {
     display: flex;
     flex-direction: column;
-    gap:10px;
-    margin-top:1rem; 
- }
-.cart-item{
-    display:flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.indivdual-cart-item {
+    display: flex;
     justify-content: space-between;
     padding: 10px 5px;
-    border-radius:5px;
+    border-radius: 5px;
     color: black;
     border: 1px solid #ababa4;
-
 }
-.slider-footer{
+
+.slider-footer {
     position: absolute;
-    bottom:10px ;
+    bottom: 10px;
     width: 88%;
-
 }
-.total-amount{
+
+.total-amount {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid black; 
+    border: 2px solid rgb(153, 153, 153);
     border-radius: 5px;
-    padding :15px 10px;
-
+    padding: 15px 10px;
 }
-.cart-total{
+
+.cart-total {
     font-size: 16px;
-    color: black; 
+    color: black;
     font-weight: 500;
 }
-.check-btn{
-   
+
+.check-btn {
     width: 100%;
     margin-top: 2rem;
-    background-color: rgba(39, 181, 39, 0.93);
+    background-color: rgba(39, 181, 39, 0.793);
     color: black;
     border-radius: 5px;
     cursor: pointer;
-    padding: 10px; 
+    padding: 10px;
 }
