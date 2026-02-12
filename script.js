@@ -1,4 +1,4 @@
-
+// home page
 const orderButton = document.querySelector(".order-now");
 const contactButton = document.querySelector(".contact-us");
 
@@ -16,6 +16,11 @@ if (contactButton) {
         window.location.href = "./contact.html";
     });
 }
+
+
+// Menu page
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const addToCartButtons = document.querySelectorAll(".add-to-cart");
@@ -98,6 +103,59 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+
+// contact\
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.querySelector("#contact-form");
+
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); 
+
+      
+      const name = document.querySelector("#name").value.trim();
+      const phone = document.querySelector("#phone").value.trim();
+      const email = document.querySelector("#email").value.trim();
+      const comment = document.querySelector("#comment").value.trim();
+
+      
+      if (!name || !phone || !email || !comment) {
+        alert("Please fill in all fields!");
+        return;
+      }
+
+      
+      const message = {
+        name: name,
+        phone: phone,
+        email: email,
+        comment: comment,
+        date: new Date().toLocaleString()
+      };
+
+      // Get existing messages from localStorage
+      let messages = JSON.parse(localStorage.getItem("restaurantMessages")) || [];
+
+      // Add new message
+      messages.push(message);
+
+      // Save back to localStorage
+      localStorage.setItem("restaurantMessages", JSON.stringify(messages));
+
+      // Clear form
+      form.reset();
+
+      alert("Thank you! Your message has been sent.");
+    });
+  }
+
+});
+
 
 
 
