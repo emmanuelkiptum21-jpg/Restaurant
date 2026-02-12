@@ -279,6 +279,14 @@ button {
 }
 
 /* card-list */
+.card-container{
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
 
 .card-list{
     display: flex;
@@ -328,4 +336,79 @@ button {
     color: #f8f8f7;
     box-shadow: rgba(0, 0, 0, 30%)0px 4px 4px,rgb(231, 236, 236)0px 0px 0px;
       
+}  
+
+/* cart menu slidebar */
+
+ .sidebar{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top:0;
+    /* right: -300px; */
+    right: 0; 
+    background-color: #e7dddeeb;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transition:right 0.3s ease-in-out ;
+    z-index: 1000;
+    padding:20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+ }
+ .sidebar-open{
+    right:0;
+
+ }
+ .sidebar-close{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    cursor: pointer;
+    
+ } 
+ .cart-item{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top:1rem; 
+ }
+.cart-item{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-radius:5px;
+    color: black;
+    border: 1px solid #ababa4;
+
+}
+.slider-footer{
+    position: absolute;
+    bottom:10px ;
+    width: 88%;
+
+}
+.total-amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black; 
+    border-radius: 5px;
+    padding :15px 10px;
+
+}
+.cart-total{
+    font-size: 16px;
+    color: black; 
+    font-weight: 500;
+}
+.check-btn{
+   
+    width: 100%;
+    margin-top: 2rem;
+    background-color: rgba(39, 181, 39, 0.93);
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px; 
 }
