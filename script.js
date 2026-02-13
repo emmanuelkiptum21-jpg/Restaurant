@@ -4,17 +4,17 @@ const contactButton = document.querySelector(".contact-us");
 
 // Order Button
 if (orderButton) {
-    orderButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.location.href = "./menu.html";
-    });
+  orderButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "./menu.html";
+  });
 }
 // Contact Button
 if (contactButton) {
-    contactButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.location.href = "./contact.html";
-    });
+  contactButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "./contact.html";
+  });
 }
 
 
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// contact\
+// contact
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -114,22 +114,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#contact-form");
 
   if (form) {
-    form.addEventListener("submit", function(e) {
-      e.preventDefault(); 
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-      
+
       const name = document.querySelector("#name").value.trim();
       const phone = document.querySelector("#phone").value.trim();
       const email = document.querySelector("#email").value.trim();
       const comment = document.querySelector("#comment").value.trim();
 
-      
+
       if (!name || !phone || !email || !comment) {
         alert("Please fill in all fields!");
         return;
       }
 
-      
+
       const message = {
         name: name,
         phone: phone,
@@ -155,7 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-
 
 
 
