@@ -621,6 +621,10 @@ button {
         max-width: 250px;
         height: auto;
         margin: 20px auto;
-        margin-left: -30px;
+        margin-left: -90px;
+    }
+    .Home-body{
+        
+        margin-left: 0%;
     }
 }
