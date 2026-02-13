@@ -2,7 +2,7 @@
 
 * {
 
-    font-family: "poppin" sans-serif;
+    font-family: "poppin",sans-serif;
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -580,21 +580,27 @@ button {
     }
 
     .hero-section {
-        flex-direction: column;
+
         gap: 30px;
 
     }
 
+    
     .section-content {
-        display: column;
+        margin-top: 30px;
+        flex-direction: column;
         margin-left: 10px;
+        text-align: center;
+        padding: 20px;
     }
 
-    .navbar-home {
 
+    .navbar-home {
+        margin-left: 60px;
         padding: 10px;
         width: 90%;
         align-items: center;
+        
     }
 
     .nav-menu {
@@ -605,7 +611,18 @@ button {
     .cart-icon span {
         margin-right: 48px;
     }
-    #home-footer{
+
+    #home-footer {
         width: 100%;
     }
+
+    .hero-image {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 20px auto;
+        margin-left: -110px;
+    }
+
+
 }
