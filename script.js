@@ -147,21 +147,20 @@ document.addEventListener("click", (e) => {
 
 });
 
-
 function updateCart() {
 
   const cartItemCount = document.querySelector(".cart-icon span");
   const cartTotal = document.querySelector(".cart-total");
 
+  if (cartItemCount) {
+    cartItemCount.textContent = cartItems.length;
+  }
 
-  cartItemCount.textContent = cartItems.length;
-
+  if (cartTotal) {
+    cartTotal.textContent = `Ksh ${totalAmount.toFixed(2)}`;
+  }
 
   updateCartList();
-
-
-  cartTotal.textContent =
-    `Ksh ${totalAmount.toFixed(2)}`;
 
 }
 
@@ -240,47 +239,6 @@ if (closeButton) {
     sidebar.classList.remove("sidebar-open");
   });
 }
-if (checkoutBtn) {
-
-  checkoutBtn.addEventListener("click", () => {
-
-    if (cartItems.length === 0) {
-      alert("Your cart is empty!");
-      return;
-    }
-
-    let orders = JSON.parse(localStorage.getItem("restaurantOrders")) || [];
-
-    const order = {
-      items: cartItems,
-      total: totalAmount,
-      date: new Date().toLocaleString()
-    };
-
-    orders.push(order);
-
-    localStorage.setItem(
-      "restaurantOrders",
-      JSON.stringify(orders)
-    );
-
-    alert("Order placed successfully!");
-
-    cartItems = [];
-    totalAmount = 0;
-    updateCart();
-
-    sidebar.classList.remove("sidebar-open");
-
-  });
-
-}
-//checkout
-function goCheckout(){
-
-    window.location.href = "checkout.html";
-
-}
 
 
 
@@ -334,38 +292,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-}) 
-
-
-
+})
 if (checkoutBtn) {
 
-    checkoutBtn.addEventListener("click", () => {
+  checkoutBtn.addEventListener("click", () => {
 
-        if (cartItems.length === 0) {
-            alert("Your cart is empty.");
-            return;
-        }
 
-        let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    if (cartItems.length === 0) {
 
-        const newOrder = {
-            items: cartItems,
-            total: totalAmount,
-            date: new Date().toLocaleString()
-        };
+      alert("Your cart is empty 🛒. Please add items before checkout.");
 
-        orders.push(newOrder);
+      return;
 
-        localStorage.setItem("orders", JSON.stringify(orders));
+    }
 
-        alert("Order placed successfully!");
 
-        cartItems = [];
-        totalAmount = 0;
+    // Save cart temporarily for checkout page
 
-        updateCart();
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify(cartItems)
+    );
 
-    });
+
+    localStorage.setItem(
+      "cartTotal",
+      totalAmount
+    );
+
+
+    // Open checkout page
+
+    window.location.href = "checkout.html";
+
+
+  });
 
 }
+

@@ -1,6 +1,12 @@
+
+// Protect Admin Page
+
+if (localStorage.getItem("adminLogin") !== "true") {
+
+    window.location.href = "admin-login.html";
+
+}
 let menuItems = JSON.parse(localStorage.getItem("menuItems")) || [];
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const adminOrdersList = document.getElementById("admin-orders-list");
     const foodName = document.getElementById("food-name");
@@ -316,3 +322,18 @@ document.addEventListener("DOMContentLoaded", () => {
     displayOrders();
 
 });
+const logoutBtn = document.getElementById("logout-btn");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", () => {
+
+        localStorage.removeItem("adminLogin");
+
+        alert("Logged out successfully.");
+
+        window.location.href = "admin-login.html";
+
+    });
+
+}
