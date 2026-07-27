@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tasty Eataly Checkout</title>
+
+<link rel="stylesheet" href="./styles.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<ul class="nav-menu">
+
+<li>
+<a href="./index.html">Home</a>
+</li>
+
+<li>
+<a href="./menu.html">Menu</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<section class="checkout-container">
+
+
+<div class="checkout-box">
+
+
+<h1>
+Complete Your Order
+</h1>
+
+
+<form id="checkout-form">
+
+
+<label>
+Full Name
+</label>
+
+<input 
+type="text"
+id="customer-name"
+placeholder="Enter your name"
+required>
+
+
+
+<label>
+Phone Number
+</label>
+
+<input 
+type="tel"
+id="customer-phone"
+placeholder="07xx xxx xxx"
+required>
+
+
+
+<label>
+Delivery Location
+</label>
+
+<input 
+type="text"
+id="customer-location"
+placeholder="Where should we deliver?"
+required>
+
+
+
+<label>
+Special Instructions
+</label>
+
+
+<textarea 
+id="customer-note"
+placeholder="Example: No onions">
+</textarea>
+
+
+
+<h2>
+Payment Method
+</h2>
+
+
+<div class="payment-options">
+
+
+<label>
+<input type="radio" name="payment" value="M-Pesa" checked>
+
+M-Pesa
+</label>
+
+
+<label>
+<input type="radio" name="payment" value="Cash">
+
+Cash on Delivery
+
+</label>
+
+
+</div>
+
+
+
+<button type="submit">
+
+Place Order
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+<script src="./checkout.js"></script>
+
+
+</body>
+
+</html>
