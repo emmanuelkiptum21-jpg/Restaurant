@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Tasty Eataly</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="admin-login">
+        <h2>Admin Login</h2>
+
+        <input type="email" id="admin-email" placeholder="Email">
+
+        <input type="password" id="admin-password" placeholder="Password">
+
+        <button onclick="loginAdmin()">Login</button>
+
+    </div>
+
+
+<script>
+
+function loginAdmin(){
+
+    const email = document.getElementById("admin-email").value;
+    const password = document.getElementById("admin-password").value;
+
+
+    if(email === "admin@tastyeataly.com" && password === "12345"){
+
+        localStorage.setItem("adminLogin", "true");
+
+        window.location.href = "admin.html";
+
+    }else{
+
+        alert("Wrong email or password");
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

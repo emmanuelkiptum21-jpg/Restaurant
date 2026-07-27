@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Eataly Admin</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="admin-dashboard">
+
+        <header class="admin-header">
+
+            <h1>Tasty Eataly</h1>
+
+            <span>Admin Panel</span>
+
+        </header>
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h3>Total Menu Items</h3>
+                <p id="total-items">0</p>
+            </div>
+
+
+            <div class="dashboard-card">
+                <h3>Total Orders</h3>
+                <p id="total-orders">0</p>
+            </div>
+
+
+            <div class="dashboard-card">
+                <h3>Messages</h3>
+                <p id="total-messages">0</p>
+            </div>
+
+        </div>
+
+        <section class="add-food">
+
+            <h2>Add Menu Item</h2>
+
+            <input type="text" id="food-name" placeholder="Food name">
+
+            <input type="number" id="food-price" placeholder="Price">
+
+            <input type="text" id="food-image" placeholder="Image name e.g burger.jpg">
+
+            <button id="add-food-btn">
+                Add Item
+            </button>
+
+        </section>
+
+
+        <section>
+
+            <h2>Current Menu</h2>
+
+            <div id="admin-menu-list">
+
+            </div>
+
+        </section>
+        <section class="orders-section">
+
+            <h2>Customer Orders</h2>
+
+            <div id="admin-orders-list">
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <script src="./admin.js"></script>
+
+</body>
+
+</html>
