@@ -2,33 +2,60 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login | Tasty Eataly</title>
 
-    <link rel="stylesheet" href="./styles.css">
+    <title>Tasty Eataly | Admin Login</title>
+
+    <link rel="stylesheet" href="./admin-login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body class="admin-login-body">
 
-    <div class="admin-login-container">
+    <div class="login-container">
 
-        <div class="admin-login-box">
+        <!-- Left Side -->
 
-            <div class="login-logo">
-                <i class="fa-solid fa-utensils"></i>
+        <div class="login-left">
+
+            <div class="overlay"></div>
+
+            <div class="left-content">
+
+                <i class="fa-solid fa-utensils logo-icon"></i>
+
+                <h1>Tasty Eataly</h1>
+
+                <h2>Restaurant Management System</h2>
+
+                <p>
+                    Manage orders, menus, and customers from one beautiful dashboard.
+                </p>
+
             </div>
 
-            <h1>Tasty Eataly</h1>
+        </div>
 
-            <h2>Admin Login</h2>
+        <!-- Right Side -->
 
-            <p>Sign in to access the restaurant dashboard.</p>
+        <div class="login-right">
 
-            <form id="admin-login-form">
+            <form id="admin-login-form" class="login-form">
+
+                <h2>Welcome Back</h2>
+
+                <p class="login-text">
+                    Sign in to continue
+                </p>
 
                 <div class="input-box">
 
@@ -41,7 +68,6 @@
                         required>
 
                 </div>
-
 
                 <div class="input-box">
 
@@ -57,9 +83,12 @@
 
                 </div>
 
+                <button type="submit" class="login-btn">
 
-                <button type="submit">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
                     Login
+
                 </button>
 
             </form>

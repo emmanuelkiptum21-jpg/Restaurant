@@ -1,0 +1,209 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.admin-login-body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f5f5;
+}
+
+.login-container{
+    width:1100px;
+    max-width:95%;
+    min-height:650px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+/* ==========================
+   LEFT SIDE
+========================== */
+
+.login-left{
+    position:relative;
+    background:linear-gradient(rgba(85,11,20,.92),rgba(85,11,20,.92)),
+    url("./assets/restaurant-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    padding:60px;
+}
+
+.left-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.logo-icon{
+    font-size:70px;
+    color:#E6AF2E;
+    margin-bottom:20px;
+}
+
+.left-content h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.left-content h2{
+    color:#E6AF2E;
+    margin-bottom:20px;
+    font-weight:500;
+}
+
+.left-content p{
+    line-height:1.8;
+    color:#eee;
+}
+
+/* ==========================
+   RIGHT SIDE
+========================== */
+
+.login-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+.login-form{
+    width:100%;
+    max-width:420px;
+}
+
+.login-form h2{
+    font-size:36px;
+    color:#550B14;
+}
+
+.login-text{
+    color:#666;
+    margin:10px 0 35px;
+}
+
+/* ==========================
+   INPUT BOX
+========================== */
+
+.input-box{
+    position:relative;
+    margin-bottom:25px;
+}
+
+.input-box input{
+    width:100%;
+    padding:16px 50px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    transition:.3s;
+}
+
+.input-box input:focus{
+    border-color:#E6AF2E;
+    outline:none;
+}
+
+.input-box i:first-child{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#777;
+}
+
+.toggle-password{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#777;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.login-btn{
+    width:100%;
+    padding:16px;
+    background:#E6AF2E;
+    color:#550B14;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#550B14;
+    color:white;
+}
+
+.login-btn i{
+    margin-right:10px;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+.login-container{
+    grid-template-columns:1fr;
+}
+
+.login-left{
+    display:none;
+}
+
+.login-right{
+    padding:35px;
+}
+
+.login-form h2{
+    text-align:center;
+}
+
+.login-text{
+    text-align:center;
+}
+
+}

@@ -1,11 +1,5 @@
 
-// Protect Admin Page
 
-if (localStorage.getItem("adminLogin") !== "true") {
-
-    window.location.href = "admin-login.html";
-
-}
 let menuItems = JSON.parse(localStorage.getItem("menuItems")) || [];
 document.addEventListener("DOMContentLoaded", () => {
     const adminOrdersList = document.getElementById("admin-orders-list");

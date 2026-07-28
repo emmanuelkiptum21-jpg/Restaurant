@@ -1,27 +1,58 @@
-const loginForm = document.getElementById("admin-login-form");
+document.addEventListener("DOMContentLoaded", () => {
 
-loginForm.addEventListener("submit", function (e) {
+    const loginForm = document.getElementById("admin-login-form");
+    const email = document.getElementById("admin-email");
+    const password = document.getElementById("admin-password");
+    const togglePassword = document.querySelector(".toggle-password");
 
-    e.preventDefault();
+    // Show / Hide Password
+    if (togglePassword) {
 
-    const email = document.getElementById("admin-email").value.trim();
-    const password = document.getElementById("admin-password").value.trim();
+        togglePassword.addEventListener("click", () => {
 
-    const adminEmail = "admin@tastyeataly.com";
-    const adminPassword = "12345";
+            if (password.type === "password") {
 
-    if (email === adminEmail && password === adminPassword) {
+                password.type = "text";
+                togglePassword.classList.remove("fa-eye");
+                togglePassword.classList.add("fa-eye-slash");
 
-        localStorage.setItem("adminLogin", "true");
+            } else {
 
-        alert("Login Successful!");
+                password.type = "password";
+                togglePassword.classList.remove("fa-eye-slash");
+                togglePassword.classList.add("fa-eye");
 
-        window.location.href = "admin.html";
+            }
 
-    } else {
-
-        alert("Invalid email or password.");
+        });
 
     }
+
+    // Login
+    loginForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const adminEmail = "admin@tastyeataly.com";
+        const adminPassword = "12345";
+
+        if (
+            email.value.trim() === adminEmail &&
+            password.value.trim() === adminPassword
+        ) {
+
+            localStorage.setItem("adminLogin", "true");
+
+            alert("Login Successful!");
+
+            window.location.href = "admin.html";
+
+        } else {
+
+            alert("Invalid email or password.");
+
+        }
+
+    });
 
 });
