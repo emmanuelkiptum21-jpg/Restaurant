@@ -123,7 +123,131 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Display items in 
+
+
+
+
+    // ===============================
+    // DISPLAY CUSTOMER MESSAGES
+    // ===============================
+
+    function displayMessages() {
+
+
+        const adminMessagesList = document.getElementById(
+            "admin-messages-list"
+        );
+
+
+        if (!adminMessagesList) return;
+
+
+        let messages = JSON.parse(
+            localStorage.getItem("restaurantMessages")
+        ) || [];
+
+
+        adminMessagesList.innerHTML = "";
+
+
+        if (messages.length === 0) {
+
+            adminMessagesList.innerHTML = `
+            <p class="no-message">
+                No customer messages yet.
+            </p>
+        `;
+
+            return;
+        }
+
+
+
+        messages.forEach((message, index) => {
+
+
+            const div = document.createElement("div");
+
+
+            div.classList.add("admin-message");
+
+
+
+            div.innerHTML = `
+
+        <h3>
+            ${message.name}
+        </h3>
+
+
+        <p>
+            <strong>Email:</strong>
+            ${message.email}
+        </p>
+
+
+        <p>
+            <strong>Phone:</strong>
+            ${message.phone}
+        </p>
+
+
+        <p>
+            <strong>Message:</strong>
+            ${message.comment}
+        </p>
+
+
+        <small>
+            ${message.date}
+        </small>
+
+
+        <br><br>
+
+
+        <button 
+        class="delete-btn"
+        onclick="deleteMessage(${index})">
+
+        Delete
+
+        </button>
+
+
+        `;
+
+
+            adminMessagesList.appendChild(div);
+
+
+        });
+        window.deleteMessage = function (index) {
+
+            let messages = JSON.parse(
+                localStorage.getItem("restaurantMessages")
+            ) || [];
+
+
+            messages.splice(index, 1);
+
+
+            localStorage.setItem(
+                "restaurantMessages",
+                JSON.stringify(messages)
+            );
+
+
+            alert("Message deleted successfully");
+
+
+            displayMessages();
+            updateDashboard();
+
+        };
+
+
+    }
 
 
     // Display items in admin
@@ -314,7 +438,7 @@ document.addEventListener("DOMContentLoaded", () => {
     displayMenuItems();
     updateDashboard();
     displayOrders();
-
+    displayMessages();
 });
 const logoutBtn = document.getElementById("logout-btn");
 

@@ -1462,4 +1462,41 @@ body {
 
 .admin-header p{
     color:#777;
+}   
+
+
+.messages-section{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    margin-top:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.admin-message{
+    border:1px solid #ddd;
+    border-left:5px solid #E6AF2E;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    background:#fafafa;
+}
+
+.admin-message h3{
+    color:#550B14;
+    margin-bottom:10px;
+}
+
+.admin-message p{
+    margin:8px 0;
+}
+
+.admin-message small{
+    color:#777;
+}
+
+.no-message{
+    text-align:center;
+    color:#888;
+    padding:30px;
 }

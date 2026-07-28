@@ -8,161 +8,169 @@
 
     <link rel="stylesheet" href="./styles.css">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-<div class="admin-container">
+    <div class="admin-container">
 
-    <!-- Sidebar -->
-    <aside class="admin-sidebar">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
 
-        <div class="logo">
+            <div class="logo">
 
-            <h2>Tasty Eataly</h2>
+                <h2>Tasty Eataly</h2>
 
-            <p>Restaurant Admin</p>
+                <p>Restaurant Admin</p>
 
-        </div>
+            </div>
 
-        <ul>
+            <ul>
 
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-chart-line"></i>
-                    Dashboard
-                </a>
-            </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
 
-            <li>
-                <a href="#add-food">
+                <li>
+                    <a href="#add-food">
+                        <i class="fa-solid fa-utensils"></i>
+                        Add Food
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu-list">
+                        <i class="fa-solid fa-burger"></i>
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#orders">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Orders
+                    </a>
+                </li>
+
+                <li>
+                    <button id="logout-btn" class="logout-btn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </button>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <header class="admin-header">
+
+                <div>
+
+                    <h1>Dashboard</h1>
+
+                    <p>Welcome back, Admin 👋</p>
+
+                </div>
+
+            </header>
+
+            <!-- Dashboard Cards -->
+
+            <div class="dashboard-cards">
+
+                <div class="dashboard-card">
+
                     <i class="fa-solid fa-utensils"></i>
-                    Add Food
-                </a>
-            </li>
 
-            <li>
-                <a href="#menu-list">
-                    <i class="fa-solid fa-burger"></i>
-                    Menu
-                </a>
-            </li>
+                    <h3>Total Menu Items</h3>
 
-            <li>
-                <a href="#orders">
+                    <p id="total-items">0</p>
+
+                </div>
+
+                <div class="dashboard-card">
+
                     <i class="fa-solid fa-cart-shopping"></i>
-                    Orders
-                </a>
-            </li>
 
-            <li>
-                <button id="logout-btn" class="logout-btn">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    Logout
+                    <h3>Total Orders</h3>
+
+                    <p id="total-orders">0</p>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <h3>Messages</h3>
+
+                    <p id="total-messages">0</p>
+
+                </div>
+
+            </div>
+
+            <!-- Add Food -->
+
+            <section id="add-food" class="add-food">
+
+                <h2>Add Menu Item</h2>
+
+                <input type="text" id="food-name" placeholder="Food Name">
+
+                <input type="number" id="food-price" placeholder="Price">
+
+                <input type="text" id="food-image" placeholder="Image e.g burger.jpg">
+
+                <button id="add-food-btn">
+                    Add Item
                 </button>
-            </li>
 
-        </ul>
+            </section>
 
-    </aside>
+            <!-- Current Menu -->
 
-    <!-- Main Content -->
+            <section id="menu-list">
 
-    <main class="main-content">
+                <h2>Current Menu</h2>
 
-        <header class="admin-header">
+                <div id="admin-menu-list"></div>
 
-            <div>
+            </section>
 
-                <h1>Dashboard</h1>
+            <!-- Orders -->
 
-                <p>Welcome back, Admin 👋</p>
+            <section id="orders" class="orders-section">
 
-            </div>
+                <h2>Customer Orders</h2>
 
-        </header>
+                <div id="admin-orders-list"></div>
 
-        <!-- Dashboard Cards -->
+            </section>
+            <section id="messages" class="messages-section">
 
-        <div class="dashboard-cards">
+                <h2>Customer Messages</h2>
 
-            <div class="dashboard-card">
+                <div id="admin-messages-list">
 
-                <i class="fa-solid fa-utensils"></i>
+                </div>
 
-                <h3>Total Menu Items</h3>
+            </section>
+            
+        </main>
 
-                <p id="total-items">0</p>
+    </div>
 
-            </div>
-
-            <div class="dashboard-card">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                <h3>Total Orders</h3>
-
-                <p id="total-orders">0</p>
-
-            </div>
-
-            <div class="dashboard-card">
-
-                <i class="fa-solid fa-envelope"></i>
-
-                <h3>Messages</h3>
-
-                <p id="total-messages">0</p>
-
-            </div>
-
-        </div>
-
-        <!-- Add Food -->
-
-        <section id="add-food" class="add-food">
-
-            <h2>Add Menu Item</h2>
-
-            <input type="text" id="food-name" placeholder="Food Name">
-
-            <input type="number" id="food-price" placeholder="Price">
-
-            <input type="text" id="food-image" placeholder="Image e.g burger.jpg">
-
-            <button id="add-food-btn">
-                Add Item
-            </button>
-
-        </section>
-
-        <!-- Current Menu -->
-
-        <section id="menu-list">
-
-            <h2>Current Menu</h2>
-
-            <div id="admin-menu-list"></div>
-
-        </section>
-
-        <!-- Orders -->
-
-        <section id="orders" class="orders-section">
-
-            <h2>Customer Orders</h2>
-
-            <div id="admin-orders-list"></div>
-
-        </section>
-
-    </main>
-
-</div>
-
-<script src="./admin.js"></script>
+    <script src="./admin.js"></script>
 
 </body>
 
